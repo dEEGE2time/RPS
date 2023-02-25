@@ -1,7 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* global style */
 body {
     font-family: 'VT323', monospace;
     padding: 0;
     margin: 0;
+}
+
+/* logo style */
+#logo {
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+}
+
+/* main menu style */
+#menu-box {
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cards {
+    width: 200px;
+    margin-top: 30px;
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    background-color: white;
+    border: 4px dashed black;
 }
