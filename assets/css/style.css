@@ -15,7 +15,7 @@ body {
 }
 
 /* main menu style */
-#menu-box {
+#main-menu {
     margin: 0 auto;
     padding: 50px;
     display: flex;
@@ -31,4 +31,12 @@ body {
     font-size: 50px;
     background-color: white;
     border: 4px dashed black;
+    cursor: pointer;
+}
+
+.cards:hover {
+    transform: translateY(-10px);
+    background-color: black;
+    border-color: white;
+    color: white;
 }
