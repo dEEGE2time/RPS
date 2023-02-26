@@ -21,7 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
 // functions
 
 function startGame() {
-
+    document.getElementById('game-window').innerHTML = `
+    <div class="game-window flex-center">
+        <div class="score">score</div>
+        <div class="enemy">
+            <div class="standby">standby</div>
+        </div>
+        <div class="player flex-center">
+            <div class="standby">standby</div>
+            <div class="tile-board">
+                <div class="tiles" id="rock">rock</div>
+                <div class="tiles id="paper">paper</div>
+                <div class="tiles id="scissor">scissor</div>
+            </div>
+        </div>
+    </div>
+    `
 }
 
 function showRules() {
