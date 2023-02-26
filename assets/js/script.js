@@ -29,16 +29,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function startGame() {
     document.getElementById('game-window').innerHTML = `
     <div class="game-window flex-center">
-        <div class="score">score</div>
+        <div class="score">0 : 0</div>
         <div class="enemy">
             <div class="standby">standby</div>
         </div>
         <div class="player flex-center">
             <div class="standby">standby</div>
             <div class="tile-board">
-                <div class="tiles" id="rock">rock</div>
-                <div class="tiles id="paper">paper</div>
-                <div class="tiles id="scissor">scissor</div>
+                <div class="tiles"><img src="assets/images/fist.webp" alt="rock" id="rock" class="image"></div>
+                <div class="tiles"><img src="assets/images/hand.webp" alt="paper" id="paper" class="image"></div>
+                <div class="tiles"><img src="assets/images/victory.webp" alt="scissor" id="scissor" class="image"></div>
             </div>
         </div>
     </div>

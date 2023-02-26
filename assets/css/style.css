@@ -50,7 +50,15 @@ body {
 }
 
 .game-window {
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+    width: 1024px;
+    border: 5px black dashed;
+}
+
+.score {
+    font-size: 64px;
 }
 
 .player {
@@ -60,6 +68,15 @@ body {
 .tile-board {
     display: flex;
     flex-wrap: wrap;
+}
+
+.image {
+    width: 128px;
+}
+
+.image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* footer styles*/
