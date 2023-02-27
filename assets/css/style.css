@@ -75,6 +75,14 @@ body {
     transform: scale(1.1);
 }
 
+.standby {
+    width: 100px;
+    height: 100px;
+    margin: 32px;
+    border: 2px black dashed;
+    border-radius: 50%;
+}
+
 /* footer styles*/
 #footer-box {
     position: absolute;
