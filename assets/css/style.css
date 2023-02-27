@@ -61,10 +61,6 @@ body {
     font-size: 64px;
 }
 
-.player {
-    
-}
-
 .tile-board {
     display: flex;
     flex-wrap: wrap;
