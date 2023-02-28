@@ -192,7 +192,7 @@ function computerScore() {
     cScore++;
     document.getElementById('computer-score').innerText = cScore;
 
-    document.getElementById('round-result').innerHTML = '<span style="font-weight:lighter; color:red">LOSE</span>';
+    document.getElementById('round-result').innerHTML = '<span style="font-size:40px; font-weight:lighter; color:red">LOSE</span>';
 
     if (cScore == 5) {
         computerWin();
@@ -200,5 +200,5 @@ function computerScore() {
 }
 
 function drawScore() {
-    document.getElementById('round-result').innerHTML = '<span style="font-weight:lighter">DRAW</span>';
+    document.getElementById('round-result').innerHTML = '<span style="font-size:40px; font-weight:lighter">DRAW</span>';
 }
