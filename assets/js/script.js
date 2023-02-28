@@ -2,6 +2,7 @@
 const buttons = document.getElementsByTagName('button');
 const mainMenu = document.getElementById('main-menu');
 const gameWindow = document.getElementById('game-window');
+const emptyWindow = document.getElementById('empty-window');
 const logo = document.getElementById('logo');
 const tiles = document.getElementsByClassName('image');
 let rock = document.getElementById('rock')
@@ -12,6 +13,7 @@ let scissor = document.getElementById('scissor')
 // Event listeners for clicks on buttons in main menu, also in active game.
 document.addEventListener("DOMContentLoaded", function() {
     gameWindow.style.display = "none";
+    emptyWindow.style.display = "none";
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute('data-type') === 'play') {
@@ -99,24 +101,59 @@ function gameOn(playerMove) {
  * If user needs to read the rules, displays the rules.
  */
 function showRules() {
-
+    logo.style.display = "block";
+    emptyWindow.style.display = "block";
+    emptyWindow.innerHTML = `
+    <div class="flex-center">
+        <h1>Rules</h1>
+        <br>
+        <p>This is the rules</p>
+    </div>
+    `;
 }
 /**
  * Displays credits for content used.
  */
 function showCredits() {
-
+    logo.style.display = "block";
+    
+    let newWindow = gameWindow.children;
+    for(i = 0; i < newWindow.length; i++) {
+        newWindow[i].style.display = "none";
+    }
+    gameWindow.innerHTML = `
+    
+    `;
 }
 
 function playerWin() {
+    logo.style.display = "block";
+    
+    let newWindow = gameWindow.children;
+    for(i = 0; i < newWindow.length; i++) {
+        newWindow[i].style.display = "none";
+    }
+    gameWindow.innerHTML = `
+    <h2>YOU WIN</h2>
+    <h2>Score: ${playerScore.textContent} : ${computerScore.textContent}</h2>
+    `;
 }
 
 function computerWin() {
-
+    logo.style.display = "block";
+    
+    let newWindow = gameWindow.children;
+    for(i = 0; i < newWindow.length; i++) {
+        newWindow[i].style.display = "none";
+    }
+    gameWindow.innerHTML = `
+    <h2>YOU LOSE</h2>
+    <h2>Score: ${playerScore.textContent} : ${computerScore.textContent}</h2>
+    `;
 }
 
 /**
- * Grabs the player score and adds 1.
+ * Grabs the player score and increment by 1.
  * Display string "WIN".
  * Runs playerWin() if player score reaches 5.
  */
@@ -124,15 +161,15 @@ function playerScore() {
     let playerScoreCalc = parseInt(document.getElementById('player-score').innerText);
     document.getElementById('player-score').innerText = ++playerScoreCalc;
 
-    document.getElementById('round-result').innerHTML = "<style: color:green;>" + "WIN" + "</style>";
+    document.getElementById('round-result').innerHTML = '<span style="font-size:40px; font-weight:lighter; color:green">WIN</span>';
 
-    if (playerScoreCalc == 5) {
+    if (playerScoreCalc === 5) {
+        console.log('score calc is now 5')
         playerWin();
     }
 }
-
 /**
- * Grabs the computer score and adds 1.
+ * Grabs the computer score and increment by 1.
  * Display string "LOSE".
  * Runs computerWin() if computer score reaches 5.
  */
@@ -140,7 +177,7 @@ function computerScore() {
     let computerScoreCalc = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScoreCalc;
 
-    document.getElementById('round-result').innerHTML = "<style: color:red;>" + "LOSE" + "</style>";
+    document.getElementById('round-result').innerHTML = '<span style="font-weight:lighter; color:red">LOSE</span>';
 
     if (computerScoreCalc == 5) {
         computerWin();
@@ -148,5 +185,5 @@ function computerScore() {
 }
 
 function drawScore() {
-    document.getElementById('round-result').innerHTML = "DRAW";
+    document.getElementById('round-result').innerHTML = '<span style="font-weight:lighter">DRAW</span>';
 }

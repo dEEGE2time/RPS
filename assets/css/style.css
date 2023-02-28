@@ -12,6 +12,7 @@ body {
     margin: 0;
     text-align: center;
     font-size: 10vw;
+    font-weight: lighter;
 }
 
 /* main menu style */
@@ -49,7 +50,7 @@ body {
     align-items: center;
 }
 
-.game-window {
+#game-window {
     margin-left: auto;
     margin-right: auto;
     margin-top: 128px;
@@ -93,6 +94,15 @@ body {
     margin: 32px;
     border: 2px black dashed;
     border-radius: 50%;
+}
+
+/* empty-window styles*/
+
+#empty-window {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 128px;
+    border: 5px black dashed;
 }
 
 /* footer styles*/
