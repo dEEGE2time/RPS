@@ -90,7 +90,7 @@ function gameOn(playerMove) {
     } else if (computerMove === playerMove) {
         computerStandby.src = computerMove;
         playerStandby.src = playerMove;
-        alert('Draw!');
+        drawScore();
     }
 }
 
@@ -117,9 +117,25 @@ function computerWin() {
 function playerScore() {
     let playerScoreCalc = parseInt(document.getElementById('player-score').innerText);
     document.getElementById('player-score').innerText = ++playerScoreCalc;
+
+    document.getElementById('round-result').innerHTML = "<style: color:green;>" + "WIN" + "</style>";
+
+    if (playerScoreCalc == 5) {
+        playerWin();
+    }
 }
 
 function computerScore() {
     let computerScoreCalc = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScoreCalc;
+
+    document.getElementById('round-result').innerHTML = "<style: color:red;>" + "LOSE" + "</style>";
+
+    if (computerScoreCalc == 5) {
+        computerWin();
+    }
+}
+
+function drawScore() {
+    document.getElementById('round-result').innerHTML = "DRAW";
 }

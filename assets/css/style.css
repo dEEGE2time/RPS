@@ -61,8 +61,16 @@ body {
     display: flex;
 }
 
-.score > p {
+#game-window p {
     margin: 0;
+}
+
+#player-score {
+    color: green;
+}
+
+#computer-score {
+    color: red;
 }
 
 .tile-board {
@@ -96,6 +104,7 @@ body {
     background-color: black;
     color: white;
     margin-top: 32px;
+    border-top: dashed;
 }
 
 /* media queries */
