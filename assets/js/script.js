@@ -66,27 +66,27 @@ function gameOn(playerMove) {
     if (computerMove === "rock" && playerMove === "scissor") {
         computerStandby.src = "assets/images/fist.webp";
         playerStandby.src = "assets/images/victory.webp";
-        computerWin();
+        computerScore();
     } else if (computerMove === "paper" && playerMove === "rock") {
         computerStandby.src = "assets/images/hand.webp";
         playerStandby.src = "assets/images/fist.webp";
-        computerWin();
+        computerScore();
     } else if (computerMove === "scissor" && playerMove === "paper") {
         computerStandby.src = "assets/images/victory.webp";
         playerStandby.src = "assets/images/hand.webp";
-        computerWin();
+        computerScore();
     } else if (computerMove === "scissor" && playerMove === "rock") {
         computerStandby.src = "assets/images/victory.webp";
         playerStandby.src = "assets/images/fist.webp";
-        playerWin();
+        playerScore();
     } else if (computerMove === "rock" && playerMove === "paper") {
         computerStandby.src = "assets/images/fist.webp";
         playerStandby.src = "assets/images/hand.webp";
-        playerWin();
+        playerScore();
     } else if (computerMove === "paper" && playerMove === "scissor") {
         computerStandby.src = "assets/images/hand.webp";
         playerStandby.src = "assets/images/victory.webp";
-        playerWin();
+        playerScore();
     } else if (computerMove === playerMove) {
         computerStandby.src = computerMove;
         playerStandby.src = playerMove;
@@ -108,7 +108,6 @@ function showCredits() {
 }
 
 function playerWin() {
-
 }
 
 function computerWin() {
@@ -116,9 +115,11 @@ function computerWin() {
 }
 
 function playerScore() {
-
+    let playerScoreCalc = parseInt(document.getElementById('player-score').innerText);
+    document.getElementById('player-score').innerText = ++playerScoreCalc;
 }
 
 function computerScore() {
-
+    let computerScoreCalc = parseInt(document.getElementById('computer-score').innerText);
+    document.getElementById('computer-score').innerText = ++computerScoreCalc;
 }
