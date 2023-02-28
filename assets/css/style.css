@@ -55,6 +55,7 @@ body {
     margin-right: auto;
     margin-top: 128px;
     border: 5px black dashed;
+    padding: 0 64px;
 }
 
 .score {
@@ -96,6 +97,13 @@ body {
     border-radius: 50%;
 }
 
+#button-div {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
 /* empty-window styles*/
 
 #empty-window {
@@ -103,6 +111,7 @@ body {
     margin-right: 5vw;
     margin-top: 128px;
     border: 5px black dashed;
+    padding: 0 64px;
 }
 
 /* footer styles*/

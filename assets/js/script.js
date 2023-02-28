@@ -1,8 +1,10 @@
 // Global variables for ease of use
 const buttons = document.getElementsByTagName('button');
+const buttonDiv = document.getElementById('button-div');
 const mainMenu = document.getElementById('main-menu');
 const gameWindow = document.getElementById('game-window');
 const emptyWindow = document.getElementById('empty-window');
+const footerBox = document.getElementById('footer-box');
 const logo = document.getElementById('logo');
 const tiles = document.getElementsByClassName('image');
 let rock = document.getElementById('rock')
@@ -50,8 +52,15 @@ function startGame() {
     gameWindow.style.marginLeft = "auto";
     gameWindow.style.marginRight = "auto";
     gameWindow.style.marginTop = "128px";
-    gameWindow.style.width = "1024px";
+    gameWindow.style.maxWidth = "1024px";
     gameWindow.style.border = "5px black dashed";
+
+    buttonDiv.style.display = "block";
+    buttonDiv.innerHTML = `
+    <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">QUIT</button>
+    `;
+
+    footerBox.style.display = "none";
 }
 /**
  * Generates a random move for the computer between "rock", "paper", "scissor".
@@ -108,6 +117,7 @@ function showRules() {
         <h1>Rules</h1>
         <br>
         <p>This is the rules</p>
+        <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">BACK</button>
     </div>
     `;
 }
@@ -116,14 +126,31 @@ function showRules() {
  */
 function showCredits() {
     logo.style.display = "block";
-    
-    let newWindow = gameWindow.children;
-    for(i = 0; i < newWindow.length; i++) {
-        newWindow[i].style.display = "none";
-    }
-    gameWindow.innerHTML = `
-    
+    emptyWindow.style.display = "block";
+    emptyWindow.innerHTML = `
+    <div class="flex-center">
+        <h1>Credits</h1>
+        <br>
+        <p>These should be credited.</p>
+        <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">BACK</button>
+    </div>
     `;
+}
+
+function returnMainMenu() {
+    logo.style.display = "block";
+
+    mainMenu.style.display = "flex";
+    mainMenu.style.margin = "0 auto";
+    mainMenu.style.padding = "50px";
+    mainMenu.style.alignItems = "center";
+    mainMenu.style.flexDirection = "column";
+    mainMenu.style.width = "50%";
+
+    emptyWindow.style.display = "none";
+    gameWindow.style.display = "none";
+    buttonDiv.style.display = "none";
+    footerBox.style.display = "block";
 }
 
 function playerWin() {
