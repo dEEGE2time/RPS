@@ -7,9 +7,9 @@ const emptyWindow = document.getElementById('empty-window');
 const footerBox = document.getElementById('footer-box');
 const logo = document.getElementById('logo');
 const tiles = document.getElementsByClassName('image');
-let rock = document.getElementById('rock')
-let paper = document.getElementById('paper')
-let scissor = document.getElementById('scissor')
+
+let pScore = 0;
+let cScore = 0;
 
 // Wait for dom to finish loading before user interaction.
 // Event listeners for clicks on buttons in main menu, also in active game.
@@ -76,32 +76,32 @@ function gameOn(playerMove) {
     let computerStandby = document.getElementById('computer-standby')
     let playerStandby = document.getElementById('player-standby')
     if (computerMove === "rock" && playerMove === "scissor") {
-        computerStandby.src = "assets/images/fist.webp";
-        playerStandby.src = "assets/images/victory.webp";
+        computerStandby.src = "assets/images/rock.webp";
+        playerStandby.src = "assets/images/scissor.webp";
         computerScore();
     } else if (computerMove === "paper" && playerMove === "rock") {
-        computerStandby.src = "assets/images/hand.webp";
-        playerStandby.src = "assets/images/fist.webp";
+        computerStandby.src = "assets/images/paper.webp";
+        playerStandby.src = "assets/images/rock.webp";
         computerScore();
     } else if (computerMove === "scissor" && playerMove === "paper") {
-        computerStandby.src = "assets/images/victory.webp";
-        playerStandby.src = "assets/images/hand.webp";
+        computerStandby.src = "assets/images/scissor.webp";
+        playerStandby.src = "assets/images/paper.webp";
         computerScore();
     } else if (computerMove === "scissor" && playerMove === "rock") {
-        computerStandby.src = "assets/images/victory.webp";
-        playerStandby.src = "assets/images/fist.webp";
+        computerStandby.src = "assets/images/scissor.webp";
+        playerStandby.src = "assets/images/rock.webp";
         playerScore();
     } else if (computerMove === "rock" && playerMove === "paper") {
-        computerStandby.src = "assets/images/fist.webp";
-        playerStandby.src = "assets/images/hand.webp";
+        computerStandby.src = "assets/images/rock.webp";
+        playerStandby.src = "assets/images/paper.webp";
         playerScore();
     } else if (computerMove === "paper" && playerMove === "scissor") {
-        computerStandby.src = "assets/images/hand.webp";
-        playerStandby.src = "assets/images/victory.webp";
+        computerStandby.src = "assets/images/paper.webp";
+        playerStandby.src = "assets/images/scissor.webp";
         playerScore();
     } else if (computerMove === playerMove) {
-        computerStandby.src = computerMove;
-        playerStandby.src = playerMove;
+        computerStandby.src = `assets/images/${computerMove}.webp`;
+        playerStandby.src = `assets/images/${playerMove}.webp`;
         drawScore();
     }
 }
@@ -139,19 +139,7 @@ function showCredits() {
 }
 
 function returnMainMenu() {
-    logo.style.display = "block";
-
-    mainMenu.style.display = "flex";
-    mainMenu.style.margin = "0 auto";
-    mainMenu.style.padding = "50px";
-    mainMenu.style.alignItems = "center";
-    mainMenu.style.flexDirection = "column";
-    mainMenu.style.width = "50%";
-
-    emptyWindow.style.display = "none";
-    gameWindow.style.display = "none";
-    buttonDiv.style.display = "none";
-    footerBox.style.display = "block";
+    location.reload();
 }
 
 function playerWin() {
@@ -163,7 +151,7 @@ function playerWin() {
     }
     gameWindow.innerHTML = `
     <h2>YOU WIN</h2>
-    <h2>Score: ${playerScore.textContent} : ${computerScore.textContent}</h2>
+    <h2>Score: ${pScore} - ${cScore}</h2>
     `;
 }
 
@@ -176,7 +164,7 @@ function computerWin() {
     }
     gameWindow.innerHTML = `
     <h2>YOU LOSE</h2>
-    <h2>Score: ${playerScore.textContent} : ${computerScore.textContent}</h2>
+    <h2>Score: ${pScore} - ${cScore}</h2>
     `;
 }
 
@@ -186,13 +174,12 @@ function computerWin() {
  * Runs playerWin() if player score reaches 5.
  */
 function playerScore() {
-    let playerScoreCalc = parseInt(document.getElementById('player-score').innerText);
-    document.getElementById('player-score').innerText = ++playerScoreCalc;
+    pScore++;
+    document.getElementById('player-score').innerText = pScore;
 
     document.getElementById('round-result').innerHTML = '<span style="font-size:40px; font-weight:lighter; color:green">WIN</span>';
 
-    if (playerScoreCalc === 5) {
-        console.log('score calc is now 5')
+    if (pScore === 5) {
         playerWin();
     }
 }
@@ -202,12 +189,12 @@ function playerScore() {
  * Runs computerWin() if computer score reaches 5.
  */
 function computerScore() {
-    let computerScoreCalc = parseInt(document.getElementById('computer-score').innerText);
-    document.getElementById('computer-score').innerText = ++computerScoreCalc;
+    cScore++;
+    document.getElementById('computer-score').innerText = cScore;
 
     document.getElementById('round-result').innerHTML = '<span style="font-weight:lighter; color:red">LOSE</span>';
 
-    if (computerScoreCalc == 5) {
+    if (cScore == 5) {
         computerWin();
     }
 }
