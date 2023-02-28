@@ -33,6 +33,7 @@ body {
     background-color: white;
     border: 4px dashed black;
     cursor: pointer;
+    text-align: center;
 }
 
 .cards:hover {
