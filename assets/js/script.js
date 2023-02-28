@@ -131,7 +131,8 @@ function showCredits() {
     <div class="flex-center">
         <h1>Credits</h1>
         <br>
-        <p>These should be credited.</p>
+        <a href="https://www.flaticon.com/free-icons/pixel" title="pixel icons" target="_blank">Pixel icons created by Dooder - Flaticon</a>
+        <a href="https://fonts.google.com/specimen/VT323" title="vt323 font" target="_blank">VT323 Font - Google Fonts</a>
         <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">BACK</button>
     </div>
     `;
