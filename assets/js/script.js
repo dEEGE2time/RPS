@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Run the game, display game for the user.
  */
 function startGame() {
+    // Styling for the game-window. Reason: "gameWindow.style.display = "none";" removed all styling when i bring it back.
     gameWindow.style.display = "flex";
     gameWindow.style.flexWrap = "wrap";
     gameWindow.style.flexDirection = "column";
@@ -51,7 +52,7 @@ function startGame() {
     gameWindow.style.border = "5px black dashed";
 }
 /**
- * Generates a random computer move.
+ * Generates a random move for the computer between "rock", "paper", "scissor".
  */
 function generateComputerMove() {
     let moves = ["rock", "paper", "scissor"];
@@ -114,6 +115,11 @@ function computerWin() {
 
 }
 
+/**
+ * Grabs the player score and adds 1.
+ * Display string "WIN".
+ * Runs playerWin() if player score reaches 5.
+ */
 function playerScore() {
     let playerScoreCalc = parseInt(document.getElementById('player-score').innerText);
     document.getElementById('player-score').innerText = ++playerScoreCalc;
@@ -125,6 +131,11 @@ function playerScore() {
     }
 }
 
+/**
+ * Grabs the computer score and adds 1.
+ * Display string "LOSE".
+ * Runs computerWin() if computer score reaches 5.
+ */
 function computerScore() {
     let computerScoreCalc = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScoreCalc;
