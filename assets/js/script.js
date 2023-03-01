@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute('data-type') === 'play') {
                 mainMenu.style.display = "none";
-                logo.style.display = "none"
+                logo.style.display = "none";
                 startGame();
             } else if (this.getAttribute('data-type') === 'rules') {
                 mainMenu.style.display = "none";
@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 mainMenu.style.display = "none";
                 showCredits();
             }
-        })
+        });
     }
     for (let i = 0; i < tiles.length; i++) {
         tiles[i].addEventListener("click", function() {
             let playerMove = this.getAttribute('data-type');
             gameOn(playerMove);
-        })
+        });
     }
-})
+});
 // FUNCTIONS
 /**
  * Run the game, display game for the user.
@@ -73,8 +73,8 @@ function generateComputerMove() {
 
 function gameOn(playerMove) {
     let computerMove = generateComputerMove();
-    let computerStandby = document.getElementById('computer-standby')
-    let playerStandby = document.getElementById('player-standby')
+    let computerStandby = document.getElementById('computer-standby');
+    let playerStandby = document.getElementById('player-standby');
     if (computerMove === "rock" && playerMove === "scissor") {
         computerStandby.src = "assets/images/rock.webp";
         playerStandby.src = "assets/images/scissor.webp";
@@ -146,7 +146,7 @@ function playerWin() {
     logo.style.display = "block";
     
     let newWindow = gameWindow.children;
-    for(i = 0; i < newWindow.length; i++) {
+    for(let i = 0; i < newWindow.length; i++) {
         newWindow[i].style.display = "none";
     }
     gameWindow.innerHTML = `
@@ -159,7 +159,7 @@ function computerWin() {
     logo.style.display = "block";
     
     let newWindow = gameWindow.children;
-    for(i = 0; i < newWindow.length; i++) {
+    for(let i = 0; i < newWindow.length; i++) {
         newWindow[i].style.display = "none";
     }
     gameWindow.innerHTML = `
