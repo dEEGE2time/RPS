@@ -2,38 +2,36 @@
 
 I made a Rock Paper Scissor of chance against a computer up to a score of 5. View the live website [here](https://deege2time.github.io/pp2/).
 
-![Mockup](docs/mockup/#)
+![Mockup](docs/readme-images/website-images/mockup.png)
 
 ## Table of Contents
 <hr>
 
-1. [Design-x](#design)
-    1. [Design Choice-x](#design-choice)
-    2. [Colors-x](#colors)
-    3. [Fonts-x](#fonts)
-2. [Features-x](#features)
-    1. [Existing Features-x](#existing-features)
-    2. [Future Features-x](#future-features)
-3. [Technologies-x](#technologies)
-    1. [Languages-x](#languages)
-    2. [Tools-x](#tools)
+1. [Design](#design)
+    1. [Design Choice](#design-choice)
+    2. [Colors](#colors)
+    3. [Fonts](#fonts)
+2. [Features](#features)
+    1. [Existing Features](#existing-features)
+    2. [Future Features](#future-features)
+3. [Technologies](#technologies)
+    1. [Languages](#languages)
+    2. [Tools](#tools)
 4. [Testing](#testing)
     1. [Validation-HTML](#validation-html)
     2. [Validation-CSS](#validation-css)
-    3. [JavaScript-Testing](#javascript-testing)
+    3. [Validation-JavaScript](#validation-javascript)
     4. [Accessibility](#accessibility)
     5. [Performance](#performance)
     6. [Responsive Design](#responsive-design)
     7. [Browser Compatibility](#browser-compatibility)
     8. [Functional Testing](#functional-testing)
-    9. [Unfixed Bugs](#unfixed-bugs)
 5. [Deployment](#deployment)
     1. [Deploying through github pages](#deploying-through-github-pages)
     2. [Fork other repositories](#fork-other-repositories)
     3. [Clone other repositories](#clone-other-repositories)
 6. [Credits](#credits)
     1. [Content](#content)
-    2. [Media](#media)
 
 ## **Design**
 <hr>
@@ -45,7 +43,7 @@ Designed with retro in mind. Used Pixel icons and font, as well as dashed border
 
 ### **Colors**
 
-Black / White are the main colors, used green and red to indicute lose / win or to distinguish you from the computer. You (green) computer (red)
+Black / White are the main colors, used green and red to indicate lose / win or to distinguish you from the computer. You (green) computer (red)
 <img src="docs/website-images/website-images/color-palette.png">
 <br>
 
@@ -58,7 +56,6 @@ Chosen font is simple and pixelated to fit website theme.
 
 * Header
     * Logo is displayed here
-    * Fully responsive on all devices.
 
 ![Header](docs/readme-images/website-images/header.png)
 
@@ -178,6 +175,11 @@ Used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) with
 
 <br>
 
+### **Validation-JavaScript**
+Used the [JSHint](https://jshint.com/) and pasted code. returnMainMenu() has been called in html with onclick="returnMainMenu()", thus JSHint did not recognize this.
+<br>
+<img src="docs/readme-images/testing/jshint.png">
+
 ### **Accessibility**
 Ran through WAVE, web accessibility evaluation tool. All pages passed with 0 errors.
 <br>
@@ -248,12 +250,6 @@ Test from following browsers without problems
 | Back button | Return to main menu | Brings user back to main menu | Works as expected |
 <br>
 
-### **Unfixed Bugs**
-<br>
-Bugs to be fixed in the future as I did not have time.
-* Regarding website responsiveness, the content starts to slightly move to the left below 340px.
-<br>
-
 ## **Deployment**
 <hr>
 
@@ -286,26 +282,19 @@ The website was deployed through the use of GitHub Pages, a feature built in to 
 ## **Credits**
 <hr>
 
-* Animation
-    * Used a combination of these two to create hovering psuedo class animations with CSS.
-        * [Transform](https://www.w3schools.com/cssref/css3_pr_transform.php)
-        * [Transition](https://www.w3schools.com/css/css3_transitions.asp)
+* [Updating src attribute](https://www.w3schools.com/jsref/prop_img_src.asp)
+    * Used this tutorial for updating images.
+<br>
 
-* [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-    * Used to create the structure of the website.
+* [Pixel icons created by Dooder - Flaticon](https://www.flaticon.com/free-icons/pixel)
+<br>
 
-* [Gradient](https://cssgradient.io/)
-    * Used this generator to create desired color gradients.
+* [VT323 Font - Google Fonts](https://fonts.google.com/specimen/VT323)
 <br>
 
 ### **Content**
 
-All content except vinyl image on landing page is owned by dEEGE.
+Pixel hand icons by [Pixel icons created by Dooder - Flaticon](https://www.flaticon.com/free-icons/pixel).
 <br>
-
-### **Media**
-
-
-Landing page background image of a vinyl was grabbed from [Pexels](https://www.pexels.com/photo/blue-vinyl-record-playing-on-turntable-1389429/).
-
-All audio files are owned by me.
+Font by [VT323 Font - Google Fonts](https://fonts.google.com/specimen/VT323)
+<br>
