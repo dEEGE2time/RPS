@@ -1,108 +1,331 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissor
 
-Welcome dEEGE2time,
+I made a Rock Paper Scissor of chance against a computer up to a score of 5. View the live website [here](https://deege2time.github.io/pp2/).
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mockup](docs/mockup/#)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table of Contents
+<hr>
 
-## Gitpod Reminders
+1. [Design-x](#design)
+    1. [Design Choice-x](#design-choice)
+    2. [Colors-x](#colors)
+    3. [Fonts-x](#fonts)
+2. [Features-x](#features)
+    1. [Existing Features-x](#existing-features)
+    2. [Future Features-x](#future-features)
+3. [Technologies-x](#technologies)
+    1. [Languages-x](#languages)
+    2. [Tools-x](#tools)
+4. [Testing](#testing)
+    1. [Validation-HTML](#validation-html)
+    2. [Validation-CSS](#validation-css)
+    3. [JavaScript-Testing](#javascript-testing)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Responsive Design](#responsive-design)
+    7. [Browser Compatibility](#browser-compatibility)
+    8. [Functional Testing](#functional-testing)
+    9. [Unfixed Bugs](#unfixed-bugs)
+5. [Deployment](#deployment)
+    1. [Deploying through github pages](#deploying-through-github-pages)
+    2. [Fork other repositories](#fork-other-repositories)
+    3. [Clone other repositories](#clone-other-repositories)
+6. [Credits](#credits)
+    1. [Content](#content)
+    2. [Media](#media)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Design**
+<hr>
 
-`python3 -m http.server`
+### **Design choice**
 
-A blue button should appear to click: _Make Public_,
+Designed with retro in mind. Used Pixel icons and font, as well as dashed borders.
+<br>
 
-Another blue button should appear to click: _Open Browser_.
+### **Colors**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Black / White are the main colors, used green and red to indicute lose / win or to distinguish you from the computer. You (green) computer (red)
+<img src="docs/design/#">
+<br>
 
-A blue button should appear to click: _Make Public_,
+### **Fonts**
+Chosen font is simple and pixelated to fit website theme.
+* [VT323](https://fonts.google.com/specimen/VT323)
 
-Another blue button should appear to click: _Open Browser_.
+## **Features**
+<hr>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Header
+    * Logo is displayed here
+    * Fully responsive on all devices.
 
-To log into the Heroku toolbelt CLI:
+![Header](docs/readme-images/#)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Main Menu
+    * Three buttons for "Play", "Rules" and "Credits"
+    * When one button is clicked, hide main menu and display whatever was clicked.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Main Menu](docs/readme-images/#)
 
-------
+* Play
+    * Three clickable images with event listeners. (Rock / Paper / Scissor images).
+    * When player has chosen, computer choosed random between the three.
+    * Display each players choice in the middle.
+    * Player will Win / Lose / Draw each round.
+    * First to score 5 points wins.
 
-## Release History
+![Play](docs/readme-images/#) 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* Endscreen
+    * Final result and score will be displayed here.
+    * Button to return to main menu.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Endscreen](docs/readme-images/#)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Rules
+    * Here the user will be able to read the rules.
+    * Button to return to main menu.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Rules](docs/readme-images/#)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* Credits
+    * Here the user will be able to see the credits.
+    * Button to return to main menu.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Credits](docs/readme-images/#)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### **Existing Features**
+<br>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Responsive design
+* Navigation through the website
+* Playable Rock Paper Scissor game
+* Rules
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **Future Features**
+<br>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* Animation for the game
+* Enter username
+* Scoreboard
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## **Technologies**
+<hr>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Languages**
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* HTML
+    * Core content and structure written using HTML.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* CSS
+    * Styling and responsive design written using CSS.
 
-------
+* JavaScript
+    * Back-End coding to make the game work and show/hide elements written using JavaScript.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+### **Tools**
+<br>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* Github
+    * Source code hosted on github and deployed through github pages.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* Git
+    * Commit and pushing code using git
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* Cloudconvert
+    * Used https://cloudconvert.com/png-to-webp to convert images to webp.
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* Tinypng
+    * Used https://tinypng.com/ to compress webp images.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* Favicon
+    * Used  to generate icon in head.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+* Google Fonts
+    * Used [VT323](https://fonts.google.com/specimen/VT323)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+## **Testing**
+<hr>
 
-Happy coding!
+### **Validation-HTML**
+Used the [W3C Markup Validation Service](https://validator.w3.org/) with urls. All pages passed with 0 errors.
+<details><summary>Overview</summary>
+<img src="docs/validation/html/overview-validation.png">
+</details>
+<details><summary>Discography</summary>
+<img src="docs/validation/html/discography-validation.png">
+</details>
+<details><summary>Biography</summary>
+<img src="docs/validation/html/biography-validation.png">
+</details>
+<br>
+
+### **Validation-CSS**
+Used the W3C CSS Validation Service with url and stylesheet. All pages passed with 0 errors.
+<details><summary>Whole project</summary>
+<img src="docs/validation/css/page-validation.png">
+</details>
+<details><summary>Stylesheet</summary>
+<img src="docs/validation/css/stylesheet-validation.png">
+
+**Warning message: "Imported style sheets are not checked in direct input and file upload modes". From imported fonts** 
+
+</details>
+<br>
+
+### **Accessibility**
+Ran through WAVE, web accessibility evaluation tool. All pages passed with 0 errors.
+<details><summary>Overview</summary>
+<img src="docs/accessibility/overview-accessibility.png">
+</details>
+<details><summary>Discography</summary>
+<img src="docs/accessibility/discography-accessibility.png">
+</details>
+<details><summary>Biography</summary>
+<img src="docs/accessibility/biography-accessibility.png">
+</details>
+<br>
+
+### **Performance**
+Ran through Google Lighthouse via Google Devtools, only biography scored 99 whilst overview scored 72 and discography scored 75.
+<details><summary>Overview</summary>
+<img src="docs/performance/overview-performance.png">
+</details>
+<details><summary>Discography</summary>
+<img src="docs/performance/discography-performance.png">
+</details>
+<details><summary>Biography</summary>
+<img src="docs/performance/biography-performance.png">
+</details>
+<br>
+
+### **Responsive Design**
+<br>
+
+Tested for all devices 320px and up.
+* Test results from Google Devtools
+
+### **Browser Compatibility**
+<br>
+
+Test from following browsers without problems
+* Google Chrome
+* Firefox
+* Safari (iPhone)
+
+### **Functional Testing**
+<br>
+
+**Basic features displayed through all three pages.**
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Logo | Link to overview | Bring user to overview(home page) | Works as expected |
+| Navigation | Navigation for overview, discography, biography| Allow user to navigate through site and show active page | Works as expected |
+| Footer | Links to different websites where they can follow artist | Transferred to a new page in new tab | Works as expected |
+<details><summary>Images</summary>
+<img src="docs/testing/logo-testing.png">
+<img src="docs/testing/nav-testing.png">
+<img src="docs/testing/footer-testing.png">
+</details>
+<br>
+
+**Features in overview.html**
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Images | Clickable images to bring user to album/singles depending on which image clicked | Open new tab for album/single | Works as expected |
+| Link | Anchor element to "Karlskoga, Sweden" | Bring user to Karlskoga, Sweden on Google Maps | Works as expected |
+<details><summary>Images</summary>
+<img src="docs/testing/images-testing.png">
+<img src="docs/testing/link-kga-swe-testing.png">
+</details>
+<br>
+
+**Features in discography.html**
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Audio | Audio with controls, no autoplay | All audio muted when entering site, controls to audio | Works as expected |
+<details><summary>Images</summary>
+<img src="docs/testing/audio-testing.png">
+</details>
+<br>
+
+**Features in biography.html**
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Link | Anchor element to "Karlskoga Folkhögskola" | Brings user to school website in a new tab | Works as expected |
+<details><summary>Images</summary>
+<img src="docs/testing/link-kga-fhs-testing.png">
+</details>
+<br>
+
+### **Unfixed Bugs**
+<br>
+Bugs to be fixed in the future as I did not have time.
+* Regarding website responsiveness, the content starts to slightly move to the left below 340px.
+<br>
+
+## **Deployment**
+<hr>
+
+The website was deployed through the use of GitHub Pages, a feature built in to GitHub.
+
+### **Deploying through github pages**
+1. In your repository, click on "Settings" from the top of the menu.
+2. In the side menu to your left, click "Pages" in "Code and automation" section.
+3. Set "Source" to "Deploy from branch".
+4. Set desired branch and set director to /(root).
+5. Click "Save" and wait for github to display your URL at the top of this page.
+<br>
+
+### **Fork other repositories**
+1. Go to desired repository.
+2. Click "Fork" in the upper-right corner.
+3. Select owner, set repository name and add description(optional).
+4. Choose to copy default or all branches.
+5. Click "Create Form".
+<br>
+
+### **Clone other repositories**
+1. In your selected repository, click "Code" drop down button.
+2. Select desired cloning method (HTTP)
+3. Copy repository to clipboard
+4. Open IDE of choice.
+5. Type "git clone copied-git-url" into the IDE terminal. (Need git installed) 
+<br>
+
+## **Credits**
+<hr>
+
+* Animation
+    * Used a combination of these two to create hovering psuedo class animations with CSS.
+        * [Transform](https://www.w3schools.com/cssref/css3_pr_transform.php)
+        * [Transition](https://www.w3schools.com/css/css3_transitions.asp)
+
+* [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+    * Used to create the structure of the website.
+
+* [Gradient](https://cssgradient.io/)
+    * Used this generator to create desired color gradients.
+<br>
+
+### **Content**
+
+All content except vinyl image on landing page is owned by dEEGE.
+<br>
+
+### **Media**
+
+
+Landing page background image of a vinyl was grabbed from [Pexels](https://www.pexels.com/photo/blue-vinyl-record-playing-on-turntable-1389429/).
+
+All audio files are owned by me.
