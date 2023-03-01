@@ -46,7 +46,7 @@ Designed with retro in mind. Used Pixel icons and font, as well as dashed border
 ### **Colors**
 
 Black / White are the main colors, used green and red to indicute lose / win or to distinguish you from the computer. You (green) computer (red)
-<img src="docs/design/#">
+<img src="docs/website-images/color-palette.png">
 <br>
 
 ### **Fonts**
@@ -60,13 +60,13 @@ Chosen font is simple and pixelated to fit website theme.
     * Logo is displayed here
     * Fully responsive on all devices.
 
-![Header](docs/readme-images/#)
+![Header](docs/readme-images/header.png)
 
 * Main Menu
     * Three buttons for "Play", "Rules" and "Credits"
     * When one button is clicked, hide main menu and display whatever was clicked.
 
-![Main Menu](docs/readme-images/#)
+![Main Menu](docs/readme-images/main-menu.png)
 
 * Play
     * Three clickable images with event listeners. (Rock / Paper / Scissor images).
@@ -75,25 +75,31 @@ Chosen font is simple and pixelated to fit website theme.
     * Player will Win / Lose / Draw each round.
     * First to score 5 points wins.
 
-![Play](docs/readme-images/#) 
+![Play](docs/readme-images/gamewindow.png) 
 
 * Endscreen
     * Final result and score will be displayed here.
     * Button to return to main menu.
 
-![Endscreen](docs/readme-images/#)
+![Endscreen](docs/readme-images/endscreen.png)
 
 * Rules
     * Here the user will be able to read the rules.
     * Button to return to main menu.
 
-![Rules](docs/readme-images/#)
+![Rules](docs/readme-images/rules.png)
 
 * Credits
     * Here the user will be able to see the credits.
     * Button to return to main menu.
 
-![Credits](docs/readme-images/#)
+![Credits](docs/readme-images/credits.png)
+
+* Footer
+    * Portfolio Project 2
+
+![Credits](docs/readme-images/footer.png)
+
 
 ### **Existing Features**
 <br>
@@ -158,55 +164,29 @@ Chosen font is simple and pixelated to fit website theme.
 <hr>
 
 ### **Validation-HTML**
-Used the [W3C Markup Validation Service](https://validator.w3.org/) with urls. All pages passed with 0 errors.
-<details><summary>Overview</summary>
-<img src="docs/validation/html/overview-validation.png">
-</details>
-<details><summary>Discography</summary>
-<img src="docs/validation/html/discography-validation.png">
-</details>
-<details><summary>Biography</summary>
-<img src="docs/validation/html/biography-validation.png">
-</details>
+Used the [W3C Markup Validation Service](https://validator.w3.org/) with urls. All pages passed with 2 errors.
+<img src="docs/readme-images/testing/html-validation.png">
+
+**Warning message: "Bad value for attribute src on element img: Must be non-empty. (src="", because I was intending on having no image but an element to replace with user and computer choice)** 
+
 <br>
 
 ### **Validation-CSS**
-Used the W3C CSS Validation Service with url and stylesheet. All pages passed with 0 errors.
-<details><summary>Whole project</summary>
-<img src="docs/validation/css/page-validation.png">
-</details>
-<details><summary>Stylesheet</summary>
-<img src="docs/validation/css/stylesheet-validation.png">
+Used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) with url and stylesheet. All pages passed with 0 errors.
+<img src="docs/readme-images/testing/css-validation.png">
 
-**Warning message: "Imported style sheets are not checked in direct input and file upload modes". From imported fonts** 
-
-</details>
 <br>
 
 ### **Accessibility**
 Ran through WAVE, web accessibility evaluation tool. All pages passed with 0 errors.
-<details><summary>Overview</summary>
-<img src="docs/accessibility/overview-accessibility.png">
-</details>
-<details><summary>Discography</summary>
-<img src="docs/accessibility/discography-accessibility.png">
-</details>
-<details><summary>Biography</summary>
-<img src="docs/accessibility/biography-accessibility.png">
-</details>
+<img src="docs/readme-images/testing/wave.png">
+
 <br>
 
 ### **Performance**
-Ran through Google Lighthouse via Google Devtools, only biography scored 99 whilst overview scored 72 and discography scored 75.
-<details><summary>Overview</summary>
-<img src="docs/performance/overview-performance.png">
-</details>
-<details><summary>Discography</summary>
-<img src="docs/performance/discography-performance.png">
-</details>
-<details><summary>Biography</summary>
-<img src="docs/performance/biography-performance.png">
-</details>
+Ran through Google Lighthouse via Google Devtools, Performance score 98.
+<img src="docs/readme-images/testing/lighthouse.png">
+
 <br>
 
 ### **Responsive Design**
@@ -214,6 +194,8 @@ Ran through Google Lighthouse via Google Devtools, only biography scored 99 whil
 
 Tested for all devices 320px and up.
 * Test results from Google Devtools
+    * Google Devtools
+    * iPhone
 
 ### **Browser Compatibility**
 <br>
