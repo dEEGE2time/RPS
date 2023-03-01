@@ -44,7 +44,7 @@ Designed with retro in mind. Used Pixel icons and font, as well as dashed border
 ### **Colors**
 
 Black / White are the main colors, used green and red to indicate lose / win or to distinguish you from the computer. You (green) computer (red)
-<img src="docs/website-images/website-images/color-palette.png">
+<img src="docs/readme-images/website-images/color-palette.png">
 <br>
 
 ### **Fonts**
