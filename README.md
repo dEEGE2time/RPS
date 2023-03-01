@@ -46,7 +46,7 @@ Designed with retro in mind. Used Pixel icons and font, as well as dashed border
 ### **Colors**
 
 Black / White are the main colors, used green and red to indicute lose / win or to distinguish you from the computer. You (green) computer (red)
-<img src="docs/website-images/color-palette.png">
+<img src="docs/website-images/website-images/color-palette.png">
 <br>
 
 ### **Fonts**
@@ -60,13 +60,13 @@ Chosen font is simple and pixelated to fit website theme.
     * Logo is displayed here
     * Fully responsive on all devices.
 
-![Header](docs/readme-images/header.png)
+![Header](docs/readme-images/website-images/header.png)
 
 * Main Menu
     * Three buttons for "Play", "Rules" and "Credits"
     * When one button is clicked, hide main menu and display whatever was clicked.
 
-![Main Menu](docs/readme-images/main-menu.png)
+![Main Menu](docs/readme-images/website-images/main-menu.png)
 
 * Play
     * Three clickable images with event listeners. (Rock / Paper / Scissor images).
@@ -75,30 +75,30 @@ Chosen font is simple and pixelated to fit website theme.
     * Player will Win / Lose / Draw each round.
     * First to score 5 points wins.
 
-![Play](docs/readme-images/gamewindow.png) 
+![Play](docs/readme-images/website-images/gamewindow.png) 
 
 * Endscreen
     * Final result and score will be displayed here.
     * Button to return to main menu.
 
-![Endscreen](docs/readme-images/endscreen.png)
+![Endscreen](docs/readme-images/website-images/endscreen.png)
 
 * Rules
     * Here the user will be able to read the rules.
     * Button to return to main menu.
 
-![Rules](docs/readme-images/rules.png)
+![Rules](docs/readme-images/website-images/rules.png)
 
 * Credits
     * Here the user will be able to see the credits.
     * Button to return to main menu.
 
-![Credits](docs/readme-images/credits.png)
+![Credits](docs/readme-images/website-images/credits.png)
 
 * Footer
     * Portfolio Project 2
 
-![Credits](docs/readme-images/footer.png)
+![Credits](docs/readme-images/website-images/footer.png)
 
 
 ### **Existing Features**
@@ -107,7 +107,10 @@ Chosen font is simple and pixelated to fit website theme.
 * Responsive design
 * Navigation through the website
 * Playable Rock Paper Scissor game
-* Rules
+* Show rules
+* Show credits
+* Button to return to main menu
+* Show scores and increment when it should be incremented
 
 ### **Future Features**
 <br>
@@ -152,10 +155,6 @@ Chosen font is simple and pixelated to fit website theme.
     * Used https://tinypng.com/ to compress webp images.
 
 
-* Favicon
-    * Used  to generate icon in head.
-
-
 * Google Fonts
     * Used [VT323](https://fonts.google.com/specimen/VT323)
 
@@ -165,6 +164,7 @@ Chosen font is simple and pixelated to fit website theme.
 
 ### **Validation-HTML**
 Used the [W3C Markup Validation Service](https://validator.w3.org/) with urls. All pages passed with 2 errors.
+<br>
 <img src="docs/readme-images/testing/html-validation.png">
 
 **Warning message: "Bad value for attribute src on element img: Must be non-empty. (src="", because I was intending on having no image but an element to replace with user and computer choice)** 
@@ -173,18 +173,21 @@ Used the [W3C Markup Validation Service](https://validator.w3.org/) with urls. A
 
 ### **Validation-CSS**
 Used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) with url and stylesheet. All pages passed with 0 errors.
+<br>
 <img src="docs/readme-images/testing/css-validation.png">
 
 <br>
 
 ### **Accessibility**
 Ran through WAVE, web accessibility evaluation tool. All pages passed with 0 errors.
+<br>
 <img src="docs/readme-images/testing/wave.png">
 
 <br>
 
 ### **Performance**
 Ran through Google Lighthouse via Google Devtools, Performance score 98.
+<br>
 <img src="docs/readme-images/testing/lighthouse.png">
 
 <br>
@@ -208,46 +211,41 @@ Test from following browsers without problems
 ### **Functional Testing**
 <br>
 
-**Basic features displayed through all three pages.**
+**Features in main menu**
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Logo | Link to overview | Bring user to overview(home page) | Works as expected |
-| Navigation | Navigation for overview, discography, biography| Allow user to navigate through site and show active page | Works as expected |
-| Footer | Links to different websites where they can follow artist | Transferred to a new page in new tab | Works as expected |
-<details><summary>Images</summary>
-<img src="docs/testing/logo-testing.png">
-<img src="docs/testing/nav-testing.png">
-<img src="docs/testing/footer-testing.png">
-</details>
+| Play button | Start game | Brings user to game window | Works as expected |
+| Rules button | Show rules | Brings user to rules window | Works as expected |
+| Credits button | Show credits | Brings user to credits window | Works as expected |
 <br>
 
-**Features in overview.html**
+**Features in game window**
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Images | Clickable images to bring user to album/singles depending on which image clicked | Open new tab for album/single | Works as expected |
-| Link | Anchor element to "Karlskoga, Sweden" | Bring user to Karlskoga, Sweden on Google Maps | Works as expected |
-<details><summary>Images</summary>
-<img src="docs/testing/images-testing.png">
-<img src="docs/testing/link-kga-swe-testing.png">
-</details>
+| Clickable Images | Select Rock / Paper / Scissor | Display chosen image in middle (bottom) | Works as expected |
+| Computer | Select random image between Rock / Paper / Scissor after player has chosen | Display chosen image in middle (top) | Works as expected |
+| Quit button | Return to main menu | Brings user back to main menu, game reset. | Works as expected |
 <br>
 
-**Features in discography.html**
+**Features in end screen**
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Audio | Audio with controls, no autoplay | All audio muted when entering site, controls to audio | Works as expected |
-<details><summary>Images</summary>
-<img src="docs/testing/audio-testing.png">
-</details>
+| Results | Display match results and scores | Shows your score, computer score and player won/lost  | Works as expected |
+| Quit button | Return to main menu | Brings user back to main menu, game reset | Works as expected |
 <br>
 
-**Features in biography.html**
+**Features in rules**
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Link | Anchor element to "Karlskoga Folkhögskola" | Brings user to school website in a new tab | Works as expected |
-<details><summary>Images</summary>
-<img src="docs/testing/link-kga-fhs-testing.png">
-</details>
+| Rules | Rules written in a box | Shows user the rules for the game | Works as expected |
+| Back button | Return to main menu | Brings user back to main menu | Works as expected |
+<br>
+
+**Features in credits**
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Credits | Credits written in a box | Shows user the credits for the game | Works as expected |
+| Back button | Return to main menu | Brings user back to main menu | Works as expected |
 <br>
 
 ### **Unfixed Bugs**
