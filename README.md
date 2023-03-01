@@ -67,10 +67,10 @@ Chosen font is simple and pixelated to fit website theme.
 
 * Play
     * Three clickable images with event listeners. (Rock / Paper / Scissor images).
-    * When player has chosen, computer choosed random between the three.
+    * When player has chosen, computer chooses randomly between the three.
     * Display each players choice in the middle.
     * Player will Win / Lose / Draw each round.
-    * First to score 5 points wins.
+    * First to score 5 points wins the game.
 
 ![Play](docs/readme-images/website-images/gamewindow.png) 
 
@@ -284,6 +284,9 @@ The website was deployed through the use of GitHub Pages, a feature built in to 
 
 * [Updating src attribute](https://www.w3schools.com/jsref/prop_img_src.asp)
     * Used this tutorial for updating images.
+<br>
+
+* [location.reload();](https://www.w3schools.com/jsref/met_loc_reload.asp)
 <br>
 
 * [Pixel icons created by Dooder - Flaticon](https://www.flaticon.com/free-icons/pixel)
