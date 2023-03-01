@@ -126,6 +126,11 @@ body {
     color: white;
     margin-top: 32px;
     border-top: dashed;
+    text-align: center;
+}
+
+#footer-box p {
+    padding-top: 16px;
 }
 
 /* media queries */

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Rock Paper Scissor</title>
@@ -16,31 +17,35 @@
         </div>
     </header>
     <main class="flex-center">
+        <!-- Main menu HTML structure -->
         <div id="main-menu">
             <button class="cards" data-type="play">PLAY</button>
             <button class="cards" data-type="rules">RULES</button>
             <button class="cards" data-type="credits">CREDITS</button>
         </div>
+        <!-- Hidden game window reveal after clicking Play -->
         <div id="game-window">
             <h2 id="round-result" style="font-size: 32px;">BEGIN</h2>
-            <div class="score"><p id="player-score">0</p><p>:</p><p id="computer-score">0</p></div>
+            <div class="score"><p id="player-score">0</p><p>:</p><p id="computer-score">0</p></div> <!-- Placeholder numbers for score -->
             <div class="enemy">
-                <img class="standby" id="computer-standby" src="">
+                <img class="standby" id="computer-standby" src=""> <!-- Display computers move by replacing the src -->
             </div>
             <div class="player flex-center">
-                <img class="standby"id="player-standby" src="">
-                <div class="tile-board">
+                <img class="standby"id="player-standby" src=""> <!-- Display players move by replacing the src -->
+                <div class="tile-board"> <!-- div for displaying rock / paper / scissor for the players-->
                     <div class="tiles"><img src="assets/images/rock.webp" alt="rock" data-type="rock" class="image" id="rock"></div>
                     <div class="tiles"><img src="assets/images/paper.webp" alt="paper" data-type="paper" class="image" id="paper"></div>
                     <div class="tiles"><img src="assets/images/scissor.webp" alt="scissor" data-type="scissor" class="image" id="scissor"></div>
                 </div>
             </div>
         </div>
-        <div id="button-div"></div>
-        <div id="empty-window"></div>
+        <div id="button-div"></div> <!-- Back button goes here -->
+        <div id="empty-window"></div> <!-- And empty window replaced by either Rules or Credits -->
     </main>
     <footer>
-        <div id="footer-box">Links</div>
+        <div id="footer-box">
+            <p>Portfolio Project 2</p>
+        </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
