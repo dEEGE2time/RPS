@@ -129,7 +129,9 @@ function showRules() {
     <div class="flex-center">
         <h1>Rules</h1>
         <br>
-        <p>This is the rules</p>
+        <p>Rock & Paper & Scissor is a game where in this case, you play against a computer. <br>After pressing play, the game is on standby.
+        <br>Start the game by selecting Rock / Paper / Scissor. <br><br>Rock beats Scissor<br>Paper beats Rock<br>Scissor beats Paper<br><br>
+        First player to score 5 wins.</p>
         <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">BACK</button>
     </div>
     `;
