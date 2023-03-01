@@ -25,7 +25,7 @@ body {
     width: 50%;
 }
 
-.cards {
+.cards { /* style for rock & paper & scissor */
     width: 200px;
     margin-top: 30px;
     font-family: 'VT323', monospace;

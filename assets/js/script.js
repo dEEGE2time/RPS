@@ -16,7 +16,7 @@ let cScore = 0;
 document.addEventListener("DOMContentLoaded", function() {
     gameWindow.style.display = "none";
     emptyWindow.style.display = "none";
-    for (let button of buttons) {
+    for (let button of buttons) { // Keep track of player choice main menu
         button.addEventListener("click", function() {
             if (this.getAttribute('data-type') === 'play') {
                 mainMenu.style.display = "none";
@@ -31,16 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    for (let i = 0; i < tiles.length; i++) {
+    for (let i = 0; i < tiles.length; i++) { // Keep track of player choice in-game
         tiles[i].addEventListener("click", function() {
             let playerMove = this.getAttribute('data-type');
             gameOn(playerMove);
         });
     }
 });
+
 // FUNCTIONS
+
 /**
  * Run the game, display game for the user.
+ * Hide what's needed.
  */
 function startGame() {
     // Styling for the game-window. Reason: "gameWindow.style.display = "none";" removed all styling when i bring it back.
@@ -55,13 +58,16 @@ function startGame() {
     gameWindow.style.maxWidth = "1024px";
     gameWindow.style.border = "5px black dashed";
 
+    // Back button
     buttonDiv.style.display = "block";
     buttonDiv.innerHTML = `
     <button onclick="returnMainMenu()" class="cards" style="margin-bottom:10px">QUIT</button>
     `;
 
+    // Hide footer in-game
     footerBox.style.display = "none";
 }
+
 /**
  * Generates a random move for the computer between "rock", "paper", "scissor".
  */
@@ -71,10 +77,15 @@ function generateComputerMove() {
     return moves[randomMove];
 }
 
+/**
+ * Display what both players picked.
+ * Rules for the game.
+ */
 function gameOn(playerMove) {
     let computerMove = generateComputerMove();
     let computerStandby = document.getElementById('computer-standby');
     let playerStandby = document.getElementById('player-standby');
+    // Computer wins
     if (computerMove === "rock" && playerMove === "scissor") {
         computerStandby.src = "assets/images/rock.webp";
         playerStandby.src = "assets/images/scissor.webp";
@@ -87,6 +98,7 @@ function gameOn(playerMove) {
         computerStandby.src = "assets/images/scissor.webp";
         playerStandby.src = "assets/images/paper.webp";
         computerScore();
+    // Player wins
     } else if (computerMove === "scissor" && playerMove === "rock") {
         computerStandby.src = "assets/images/scissor.webp";
         playerStandby.src = "assets/images/rock.webp";
@@ -99,6 +111,7 @@ function gameOn(playerMove) {
         computerStandby.src = "assets/images/paper.webp";
         playerStandby.src = "assets/images/scissor.webp";
         playerScore();
+    // Draw
     } else if (computerMove === playerMove) {
         computerStandby.src = `assets/images/${computerMove}.webp`;
         playerStandby.src = `assets/images/${playerMove}.webp`;
@@ -121,6 +134,7 @@ function showRules() {
     </div>
     `;
 }
+
 /**
  * Displays credits for content used.
  */
@@ -138,34 +152,45 @@ function showCredits() {
     `;
 }
 
+/**
+ * Reload, to return to main menu.
+ */
 function returnMainMenu() {
-    location.reload();
+    location.reload(); // location.reload(); has been used to ensure the players starts a NEW game.
 }
 
+/**
+ * Player won
+ * Display final score with win screen
+ */
 function playerWin() {
     logo.style.display = "block";
     
-    let newWindow = gameWindow.children;
+    let newWindow = gameWindow.children; // Get all child elements inside game-window and hide them.
     for(let i = 0; i < newWindow.length; i++) {
         newWindow[i].style.display = "none";
     }
     gameWindow.innerHTML = `
     <h2>YOU WIN</h2>
     <h2>Score: ${pScore} - ${cScore}</h2>
-    `;
+    `; // New content in game-window
 }
 
+/**
+ * Computer won
+ * Display final score with loss screen
+ */
 function computerWin() {
     logo.style.display = "block";
     
-    let newWindow = gameWindow.children;
+    let newWindow = gameWindow.children; // Get all child elements inside game-window and hide them.
     for(let i = 0; i < newWindow.length; i++) {
         newWindow[i].style.display = "none";
     }
-    gameWindow.innerHTML = `
+    gameWindow.innerHTML = ` 
     <h2>YOU LOSE</h2>
     <h2>Score: ${pScore} - ${cScore}</h2>
-    `;
+    `; // New content in game-window
 }
 
 /**
@@ -183,6 +208,7 @@ function playerScore() {
         playerWin();
     }
 }
+
 /**
  * Grabs the computer score and increment by 1.
  * Display string "LOSE".
@@ -199,6 +225,10 @@ function computerScore() {
     }
 }
 
+/**
+ * Display Draw string
+ * No score added, game continues.
+ */
 function drawScore() {
     document.getElementById('round-result').innerHTML = '<span style="font-size:40px; font-weight:lighter">DRAW</span>';
 }
