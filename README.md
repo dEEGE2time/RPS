@@ -287,6 +287,7 @@ The website was deployed through the use of GitHub Pages, a feature built in to 
 <br>
 
 * [location.reload();](https://www.w3schools.com/jsref/met_loc_reload.asp)
+    * Used to return user to main menu (refresh page).
 <br>
 
 * [Pixel icons created by Dooder - Flaticon](https://www.flaticon.com/free-icons/pixel)
