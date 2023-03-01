@@ -299,5 +299,6 @@ The website was deployed through the use of GitHub Pages, a feature built in to 
 
 Pixel hand icons by [Pixel icons created by Dooder - Flaticon](https://www.flaticon.com/free-icons/pixel).
 <br>
+
 Font by [VT323 Font - Google Fonts](https://fonts.google.com/specimen/VT323)
 <br>
